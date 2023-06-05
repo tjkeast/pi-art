@@ -19,9 +19,9 @@ def createDirectory(dirname: str, delete: bool = False) -> None:
     if os.path.exists(dirname):
         if delete:
             shutil.rmtree(dirname)
-            log.debug('Recreated new dirctory %s' % dirname)
+            log.debug('Removed directory %s' % dirname)
         else:
-            log.debug('Directory %s already exists. Skipping creation.' % dirname)
+            log.debug('Skipped creating directory %s - already exists' % dirname)
             return
     
     os.makedirs(dirname)
@@ -33,5 +33,6 @@ def main() -> None:
     downloadImage(image_url)
 
 if __name__ == "__main__":
-    log.basicConfig(level=log.INFO)
+    log.basicConfig(level=log.DEBUG)
+    log.info('App started')
     main()
