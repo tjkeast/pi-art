@@ -19,7 +19,7 @@ pip install -r requirements.txt
 Run application
 
 ```
-python main.py
+python src/main.py
 ```
 
 ### Help
@@ -34,5 +34,5 @@ Run with Docker
 
 ```
 docker build -t pi-art .
-docker run -it pi-art
+docker run -it -e DISPLAY=:0 pi-art
 ```
