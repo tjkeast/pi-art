@@ -34,5 +34,5 @@ Run with Docker
 
 ```
 docker build -t pi-art .
-docker run -i pi-art
+docker run -it pi-art
 ```
